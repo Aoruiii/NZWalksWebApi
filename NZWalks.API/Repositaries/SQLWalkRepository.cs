@@ -13,9 +13,39 @@ public class SQLWalkRepository : IWalkRepository
         this.dbContext = dbContext;
     }
 
-    public async Task<List<Walk>> GetAllAsync()
+    public async Task<List<Walk>> GetAllAsync(string? filterBy, string? filterQuery,
+    string? orderBy, bool isAscending, int pageNum, int pageSize)
     {
-        return await dbContext.Walks.Include("Difficulty").Include("Region").ToListAsync();
+        var walks = dbContext.Walks.Include("Difficulty").Include("Region").AsQueryable<Walk>();
+
+        // Filter
+        if (!string.IsNullOrWhiteSpace(filterBy) && !string.IsNullOrWhiteSpace(filterQuery))
+        {
+            if (filterBy.Equals("name", StringComparison.OrdinalIgnoreCase))
+            {
+                walks = walks.Where(x => x.Name.Contains(filterQuery));
+            }
+
+        }
+
+        // Order
+        if (!string.IsNullOrWhiteSpace(orderBy))
+        {
+            if (orderBy.Equals("name", StringComparison.OrdinalIgnoreCase))
+            {
+                walks = isAscending ? walks.OrderBy(x => x.Name) : walks.OrderByDescending(x => x.Name);
+            }
+            else if (orderBy.Equals("length", StringComparison.OrdinalIgnoreCase))
+            {
+                walks = isAscending ? walks.OrderBy(x => x.LengthInKm) : walks.OrderByDescending(x => x.LengthInKm);
+            }
+        }
+
+        // Pagenation
+        var skipNum = (pageNum - 1) * pageSize;
+
+
+        return await walks.Skip(skipNum).Take(pageSize).ToListAsync();
     }
 
     public async Task<Walk> CreateAsync(Walk walk)

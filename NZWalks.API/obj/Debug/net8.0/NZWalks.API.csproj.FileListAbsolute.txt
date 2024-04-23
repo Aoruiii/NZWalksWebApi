@@ -253,3 +253,4 @@
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/AutoMapper.dll
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/obj/Debug/net8.0/NZWalks.API.sourcelink.json

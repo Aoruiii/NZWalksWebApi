@@ -21,10 +21,14 @@ public class WalksController : ControllerBase
         this.walkRepository = walkRepository;
     }
 
+    // GET: /api/walks?filterBy=Name&filterQuery=Park
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll([FromQuery] string? filterBy = null, [FromQuery] string? filterQuery = null,
+    [FromQuery] string? orderBy = null, [FromQuery] bool isAscending = true,
+    [FromQuery] int pageNum = 1, [FromQuery] int pageSize = 1000)
     {
-        var walksDto = mapper.Map<List<WalkDto>>(await walkRepository.GetAllAsync());
+        var walksDto = mapper.Map<List<WalkDto>>(await walkRepository.GetAllAsync(filterBy, filterQuery, orderBy, isAscending,
+        pageNum, pageSize));
         return Ok(walksDto);
     }
 
