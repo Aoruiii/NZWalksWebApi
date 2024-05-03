@@ -9,6 +9,7 @@ using NZWalks.API.Repositories;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.FileProviders;
 using Serilog;
+using NZWalks.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 var logger = new LoggerConfiguration()
         .WriteTo.Console()
-        .MinimumLevel.Information()
+        .WriteTo.File("Logs/NZWalks_Log.txt", rollingInterval: RollingInterval.Day)
+        .MinimumLevel.Warning()
         .CreateLogger();
 
 builder.Logging.ClearProviders();
@@ -115,6 +117,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.UseHttpsRedirection();
 
 // Ensure authentication is used

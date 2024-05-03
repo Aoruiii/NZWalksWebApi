@@ -29,6 +29,7 @@ public class WalksController : ControllerBase
     {
         var walksDto = mapper.Map<List<WalkDto>>(await walkRepository.GetAllAsync(filterBy, filterQuery, orderBy, isAscending,
         pageNum, pageSize));
+
         return Ok(walksDto);
     }
 
