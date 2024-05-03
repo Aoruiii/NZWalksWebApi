@@ -261,3 +261,12 @@
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.AspNetCore.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Extensions.Hosting.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Extensions.Logging.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Formatting.Compact.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Settings.Configuration.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Sinks.Console.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Sinks.File.dll
