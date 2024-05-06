@@ -270,3 +270,5 @@
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Sinks.Console.dll
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
 /Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Serilog.Sinks.File.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

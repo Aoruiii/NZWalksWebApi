@@ -8,8 +8,9 @@ using NZWalks.API.Repositories;
 
 namespace NZWalks.API.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 [ApiController]
+[ApiVersion("1.0")]
 public class WalksController : ControllerBase
 {
     private readonly IMapper mapper;
@@ -23,6 +24,7 @@ public class WalksController : ControllerBase
 
     // GET: /api/walks?filterBy=Name&filterQuery=Park
     [HttpGet]
+    [MapToApiVersion("1.0")]
     public async Task<IActionResult> GetAll([FromQuery] string? filterBy = null, [FromQuery] string? filterQuery = null,
     [FromQuery] string? orderBy = null, [FromQuery] bool isAscending = true,
     [FromQuery] int pageNum = 1, [FromQuery] int pageSize = 1000)
