@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/NZWalks.API.csproj": {}
+    "/Users/aorui.tan/Desktop/Web Developer/csharp/NZWalks/NZWalks.API/NZWalks.API.csproj": {}
   },
   "projects": {
-    "/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/NZWalks.API.csproj": {
+    "/Users/aorui.tan/Desktop/Web Developer/csharp/NZWalks/NZWalks.API/NZWalks.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/NZWalks.API.csproj",
+        "projectUniqueName": "/Users/aorui.tan/Desktop/Web Developer/csharp/NZWalks/NZWalks.API/NZWalks.API.csproj",
         "projectName": "NZWalks.API",
-        "projectPath": "/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/NZWalks.API.csproj",
+        "projectPath": "/Users/aorui.tan/Desktop/Web Developer/csharp/NZWalks/NZWalks.API/NZWalks.API.csproj",
         "packagesPath": "/Users/aorui.tan/.nuget/packages/",
-        "outputPath": "/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/obj/",
+        "outputPath": "/Users/aorui.tan/Desktop/Web Developer/csharp/NZWalks/NZWalks.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/aorui.tan/.nuget/NuGet/NuGet.Config"

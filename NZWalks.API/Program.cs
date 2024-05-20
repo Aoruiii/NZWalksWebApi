@@ -15,6 +15,11 @@ using NZWalks.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(80); // Listen on port 80 for all network interfaces
+});
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 var logger = new LoggerConfiguration()
@@ -128,12 +133,34 @@ builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
 var app = builder.Build();
 
+// Applying migrations automatically
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var dbNZWalksContext = services.GetRequiredService<NZWalksDbContext>();
+        dbNZWalksContext.Database.Migrate();
+
+        var dbNZWalksAuthContext = services.GetRequiredService<NZWalksAuthDbContext>();
+        dbNZWalksAuthContext.Database.Migrate();
+    }
+    catch (Exception ex)
+    {
+        // You might want to log this more formally in your logging service if migration fails
+        var loggerMigration = services.GetRequiredService<ILogger<Program>>();
+        loggerMigration.LogError(ex, "An error occurred while migrating or initializing the database.");
+        throw; // Optionally rethrow the exception if you want to halt the application start
+    }
+}
+
 var versionDescriptionProvider =
     app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || true)
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
@@ -157,9 +184,11 @@ app.UseAuthorization();
 app.UseStaticFiles(new StaticFileOptions()
 {
     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Images")),
-    RequestPath = "/Images",
+    RequestPath = "/Images"
 });
 
 app.MapControllers();
+
+app.MapGet("/test", () => "API is running");
 
 app.Run();

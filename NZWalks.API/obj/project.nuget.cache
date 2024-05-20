@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4Dd4QKH2uD0ZvL2DzHzlCvE4UarelK46O0N6wJKB6MtLjW8SdOeJ9+RSF8ZCMCUnr7oFOgzB5cSUZQ8GQGuhJg==",
+  "dgSpecHash": "+04Tj5s5rSLCpgj7gt+S6HNkJ0xmDlJ0w+Wf3waPiGvLOBLU4azQ9VR2DL2MlCangNRf9MXVznZatTl9CI8Nug==",
   "success": true,
-  "projectFilePath": "/Users/aorui.tan/Desktop/Web Developer/C#/NZWalks/NZWalks.API/NZWalks.API.csproj",
+  "projectFilePath": "/Users/aorui.tan/Desktop/Web Developer/csharp/NZWalks/NZWalks.API/NZWalks.API.csproj",
   "expectedPackageFiles": [
     "/Users/aorui.tan/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/aorui.tan/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
