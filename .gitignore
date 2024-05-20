@@ -1,0 +1,106 @@
+# Ignore sensitive information files
+ec2-docker-user_accessKeys.csv
+ec2-docker-user_credentials.csv
+key pair
+NZWalks.API/Dockerfile
+
+
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files.
+.vscode/
+.vs/
+.idea/
+*.user
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore directories with build outputs
+bin/
+obj/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of the presence of 'project.lock.json' or 
+# 'project.fragment.lock.json' that restore as part of msbuild. 
+# However, you should be aware that NuGet restore works in these cases:
+# 1. If the project is a 'Solution' type and 'project.lock.json' or 'project.fragment.lock.json' are present.
+# 2. If the project is an 'xproj' or 'project.json' type.
+# 3. If the 'project.lock.json' file is included in the source control (e.g., Git).
+packages/
+# Uncomment if necessary however generally it will be restored via the above mechanism
+#packages/*
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Microsoft Azure Emulator
+ecf/
+rcf/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directory
+.vscode/
+.vscode/*
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Tye
+.tye/
+
+# Local History for Jetbrains Rider
+.idea/.idea/
+
+# Ignore DataProtection-Keys file
+DataProtection-Keys
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of auto-generated section
