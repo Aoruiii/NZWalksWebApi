@@ -103,4 +103,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# files
+appsettings.json
+
 # End of auto-generated section
